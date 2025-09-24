@@ -1,1 +1,2 @@
-# IntroToProgramming-T1-2025
+# Dylan Salzsieder
+I do track. I have 2 dogs. I am going to college
