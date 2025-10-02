@@ -1,3 +1,6 @@
+def mad_lib(aj1, n1, aj2, n2, v1, av1):
+    print()
+
 adjective1 = input("Enter an adjective\n> ")
 noun1 = input("Enter a noun\n> ")
 adjective2 = input("Enter another adjective\n> ")
