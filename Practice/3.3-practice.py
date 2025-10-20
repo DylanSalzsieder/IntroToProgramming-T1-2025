@@ -1,0 +1,4 @@
+sentence = input("Enter a sentence\n>")
+print(sentence.upper())
+print(sentence.strip())
+print(sentence.replace("bad", "good"))
