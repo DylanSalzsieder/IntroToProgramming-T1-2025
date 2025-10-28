@@ -91,11 +91,21 @@ def neighbor_door():
     print("Diddy tells you that he's having a party and asks you to join him")
     print("What do you say?")
     choice = input("1. Yes\n2. No\n>")
-
+    if choice == "1":
+        print("Diddy walks you into his basement")
+        print("You see Diddy's victims tied to a chair and he traps you in his basement forever")
+    if choice == "2":
+        print("Diddy is disapointed and shuts the door")
+        encounter_end()
+        neighbor_house()
+    else:
+        fail()
 
 
 def neighbor_basement():
         print("You walk down the steps into" + diddy + "'s basement")
+        print("As you open the door many people look at you and run out the door")
+        print("In the basement there is a lock on the door")
 
 
 StartA()
