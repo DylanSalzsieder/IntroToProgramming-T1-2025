@@ -1,6 +1,7 @@
 item = 0
 tranq = 0
 diddy = "your neighbor"
+diddy_sleeping = 0
 def fail():
     print("You jumped in a gutter because you didn't enter one of the numbers listed")
     print("Would you like to start from the beginning?")
@@ -62,7 +63,7 @@ def leave_house():
 
 
 def down_street():
-    print()
+    print("As you walk down the street, you ")
 
 
 def neighbor_house():
@@ -128,14 +129,22 @@ def neighbor_basement():
 
 
 def diddy_sleep():
+    global diddy_sleeping
     print("Diddy then starts walking downstairs and sees you")
     print("You fire the tranquilizer and Diddy falls to the ground twitching")
-    choice = input("Do you tie the Diddy as he's twitching up or run upstairs?")
+    choice = input("Do you tie up Diddy as he's twitching up or run upstairs?")
     if choice == "1":
         print("Diddy wakes up trying to resist but he's too weak and you manage to tie him up to a chair")
         print("You defeated Diddy and are considered a hero, all of his victims that saw the whole thing praise you and you live happily ever after")
-    if choice == "2":
-        
+    elif choice == "2":
+        diddy_sleeping = 1
+        print("You go upstairs and Diddy's victims are all trapped so you open the front door with the 6 dollars")
+        print("They all thank you and run outside")
+        encounter_end()
+        print("You walk down the street")
+        down_street()
+    else:
+        fail()
 
 
 StartA()
