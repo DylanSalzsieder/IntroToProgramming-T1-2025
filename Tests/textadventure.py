@@ -1,4 +1,5 @@
 item = 0
+tranq = 0
 diddy = "your neighbor"
 def fail():
     print("You jumped in a gutter because you didn't enter one of the numbers listed")
@@ -54,6 +55,7 @@ def leave_house():
     elif choice == "2":
         print("You walk to the neighbor's house")
         encounter_end()
+        print("You arrive and walk up your neighbor's driveway and the garage is open")
         neighbor_house()
     else:
         fail()
@@ -64,7 +66,6 @@ def down_street():
 
 
 def neighbor_house():
-    print("You arrive and walk up your neighbor's driveway and the garage is open")
     print("What do you want to do?")
     choice = input("1. Knock on the front door\n2. Enter the house through the garage\n3. Walk down the street\n>")
     if choice == "1":
@@ -103,9 +104,38 @@ def neighbor_door():
 
 
 def neighbor_basement():
+        global tranq
         print("You walk down the steps into" + diddy + "'s basement")
         print("As you open the door many people look at you and run out the door")
         print("In the basement there is a lock on the door")
+        print("Do you use your " item + " on the door?")
+        choice = input("1. Yes\n2. No\n>")
+        if choice == "1":
+            if item == "6 dollars":
+                print("The door accepts the money and opens")
+                print("Inside the door there is a tranquilizer gun and you take it")
+                tranq = 1
+                end_encounter()
+                diddy_sleep()
+            else:
+                print("You don't have the right item and " + diddy + " locks you in his basement forever")
+        elif choice == "2":
+            print("You walk back outside")
+            encounter_end()
+            neighbor_house()
+        else:
+            fail()
+
+
+def diddy_sleep():
+    print("Diddy then starts walking downstairs and sees you")
+    print("You fire the tranquilizer and Diddy falls to the ground twitching")
+    choice = input("Do you tie the Diddy as he's twitching up or run upstairs?")
+    if choice == "1":
+        print("Diddy wakes up trying to resist but he's too weak and you manage to tie him up to a chair")
+        print("You defeated Diddy and are considered a hero, all of his victims that saw the whole thing praise you and you live happily ever after")
+    if choice == "2":
+        
 
 
 StartA()
