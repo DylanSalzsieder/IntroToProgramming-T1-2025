@@ -63,7 +63,7 @@ def leave_house():
 
 
 def down_street():
-    print("As you walk down the street, you ")
+    print("As you walk down the street, you see some dogs and follow them")
 
 
 def neighbor_house():
