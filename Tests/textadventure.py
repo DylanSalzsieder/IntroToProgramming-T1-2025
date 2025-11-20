@@ -109,14 +109,14 @@ def neighbor_basement():
         print("You walk down the steps into" + diddy + "'s basement")
         print("As you open the door many people look at you and run out the door")
         print("In the basement there is a lock on the door")
-        print("Do you use your " item + " on the door?")
+        print("Do you use your " + item + " on the door?")
         choice = input("1. Yes\n2. No\n>")
         if choice == "1":
             if item == "6 dollars":
                 print("The door accepts the money and opens")
                 print("Inside the door there is a tranquilizer gun and you take it")
                 tranq = 1
-                end_encounter()
+                encounter_end()
                 diddy_sleep()
             else:
                 print("You don't have the right item and " + diddy + " locks you in his basement forever")

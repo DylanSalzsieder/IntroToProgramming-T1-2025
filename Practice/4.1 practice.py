@@ -1,0 +1,1 @@
+fav_food = ["Chicken", "Taco", "Sushi"]
